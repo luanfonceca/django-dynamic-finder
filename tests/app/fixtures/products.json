@@ -1,0 +1,23 @@
+[
+    {
+        "model": "app.Product",
+        "pk": 1,
+        "fields": {
+            "name": "Diamond"
+        }
+    },
+    {
+        "model": "app.Product",
+        "pk": 2,
+        "fields": {
+            "name": "Gold"
+        }
+    },
+    {
+        "model": "app.Product",
+        "pk": 3,
+        "fields": {
+            "name": "Silver"
+        }
+    }
+]

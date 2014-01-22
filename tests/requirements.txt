@@ -1,0 +1,2 @@
+django
+wsgiref==0.1.2
