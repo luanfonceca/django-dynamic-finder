@@ -18,6 +18,19 @@ INSTALLED_APPS = (
     ...
 )
 ```
+
+```python
+# project/app/models.py
+
+from django.db import models
+
+from django_dynamic_finder.managers import DynamicFinderManager
+
+class Model(models.Model):
+    name = models.CharField(max_length=50)
+    
+    objects DynamicFinderManager()
+```
 # Usage
 ```python
 >>> Model.objects.get_by_name('Jonh') # Equivalent of Model.objects.get(name='Jonh')
