@@ -1,11 +1,11 @@
 Django Dynamic Finder
 =====================
-A Django version of the Rails Dynamic Finders, using Django Managers.
+A Django version of the Rails Dynamic Finder, using Django Managers.
 
 
 # Install
 ```sh
-$ pip install django-dynamic-finders
+$ pip install django-dynamic-finder
 ```
 
 # Setup
