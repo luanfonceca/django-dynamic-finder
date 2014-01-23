@@ -29,7 +29,7 @@ from django_dynamic_finder.managers import DynamicFinderManager
 class Model(models.Model):
     name = models.CharField(max_length=50)
     
-    objects DynamicFinderManager()
+    objects = DynamicFinderManager()
 ```
 # Usage
 ```python
