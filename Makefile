@@ -1,11 +1,14 @@
 clean:
 	@find . -name "*.pyc" -delete
 
-install:
+deps:
 	@python setup.py install
 
-test: install clean
+test, t: clean
 	@python tests/manage.py test app
 
-help:
+sub:
+	@sublime .
+
+help, h:
 	@grep '^[^#[:space:]].*:' Makefile | awk -F ":" '{print $$1}'

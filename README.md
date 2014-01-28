@@ -33,10 +33,22 @@ class Model(models.Model):
 ```
 # Usage
 ```python
->>> Model.objects.get_by_name('Jonh') # Equivalent of Model.objects.get(name='Jonh')
+>>> Model.objects.get_by_name('Jonh')
+# >>> Model.objects.get(name='Jonh')
 <Model: #1 - Jonh>
->>> Model.objects.filter_by_name('Jonh') # Equivalent of Model.objects.filter(name='Jonh')
+>>> Model.objects.filter_by_name('Jonh')
+# >>> Model.objects.filter(name='Jonh')
 ["<Model: #1 - Jonh>"]
->>> Model.objects.exclude_by_name('Jonh') # Equivalent of Model.objects.exclude(name='Jonh')
+>>> Model.objects.filter_by_name_or_name('Jonh', 'Alice')
+# >>> Model.objects.filter(Q(name='Jonh') | Q(name='Alice'))
+["<Model: #1 - Jonh>", "<Model: #2 - Alice>"]
+>>> Model.objects.exclude_by_name('Jonh')
+# >>> Model.objects.exclude(name='Jonh')
 ["<Model: #2 - Alice>", "<Model: #3 - Bob>"]
+>>> Model.objects.exclude_by_name_or_id('Jonh', 3)
+# >>> Model.objects.exclude(Q(name='Jonh') | Q(id=3))
+["<Model: #2 - Alice>"]
+>>> Model.objects.filter_by_name_or_id_or_name('Jonh', 3, 'Alice')
+# >>> Model.objects.filter(Q(name='Jonh') | Q(id=3) | Q(name='Alice'))
+["<Model: #1 - Jonh>", "<Model: #2 - Alice>", "<Model: #3 - Bob>"]
 ```
