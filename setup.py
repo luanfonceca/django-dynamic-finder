@@ -10,7 +10,7 @@ except IOError:
 
 setup(
     name='django-dynamic-finder',
-    version='0.1',
+    version='0.2',
     url='https://github.com/luanfonceca/django-dynamic-finder',
     license='BSD',
     description='A Django version of the Rails Dynamic Finder, using Django Managers.',
