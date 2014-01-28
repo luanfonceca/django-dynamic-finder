@@ -1,6 +1,6 @@
 from django.db import models
 
-from django_dynamic_finder.managers import DynamicFinderManager
+from django_dynamic_finder import DynamicFinderManager
 
 class Product(models.Model):
     name = models.CharField(max_length=50)

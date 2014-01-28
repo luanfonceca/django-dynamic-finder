@@ -1,0 +1,1 @@
+from django_dynamic_finder.managers import DynamicFinderManager
