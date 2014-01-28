@@ -31,7 +31,7 @@ class Model(models.Model):
     
     objects DynamicFinderManager()
 ```
-```
+
 # Usage
 ```python
 >>> Model.objects.get_by_name('Jonh')
